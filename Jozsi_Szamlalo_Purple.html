@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Józsi Számláló</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px #8000ff, 0 0 20px #8000ff, 0 0 30px #8000ff;
+            margin-bottom: 20px;
+        }
+        .counter {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px #8000ff, 0 0 10px #8000ff, 0 0 20px #8000ff;
+        }
+        .btn {
+            background: none;
+            border: 2px solid #8000ff;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+            text-shadow: 0 0 5px #8000ff, 0 0 10px #8000ff;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #8000ff;
+            color: #000;
+            text-shadow: none;
+        }
+        .reset {
+            border-color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+        }
+        .reset:hover {
+            background: #ff00ff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Józsi Számláló</h1>
+    <div class="counter" id="counter">0</div>
+    <button class="btn" onclick="increment()">+1</button>
+    <button class="btn reset" onclick="reset()">Reset</button>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById('counter');
+
+        function increment() {
+            count++;
+            counterElement.textContent = count;
+        }
+
+        function reset() {
+            count = 0;
+            counterElement.textContent = count;
+        }
+    </script>
+</body>
+</html>
